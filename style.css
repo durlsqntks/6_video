@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+
+body
+{
+    background-color: #212835;
+    font-size: 15px;
+}
+
+.video_wrap
+{
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.main_container
+{
+    padding: 25px;
+}
+
+.trends
+{
+    display: flex;
+    justify-content: flex-end;
+}
+    .trends #play-all
+    {
+        background-color: #fa3a2f;
+        color: white;
+        width: 95px;
+        padding: 10px 30px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+    }
+        .trends #play-all i
+        {
+            margin-right: 16px;
+        }
+            .trends #play-all i.fa-play-circle
+            {
+                display: none;
+            }
+            .trends #play-all.on i.fa-play-circle
+            {
+                display: block;
+            }
+            .trends #play-all i.fa-pause-circle
+            {
+                display: block;
+            }
+            .trends #play-all.on i.fa-pause-circle
+            {
+                display: none;
+            }
+        .trends #play-all em
+        {
+            font-style: normal;
+        }
+
+/* videos */
+.videos
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.videos .video
+{
+    position: relative;
+    width: 23%;
+    margin: 1%;
+    padding-top: 9%;
+    overflow: hidden;
+}
+.videos .video .video-time
+{
+    position: absolute;
+    right: 6px;
+    top: 65px;
+    color: white;
+    background: rgba(0,0,0,0.8);
+    padding: 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+.videos .video:hover .video-time
+{
+    opacity: 0;
+}
+.videos .video video
+{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.videos .video:hover video
+{
+    transform: scale(2.2);
+    transform-origin: center top;
+    z-index: 30;
+}
+.videos .video .video-content
+{
+    background: #fff;
+    color: #808080;
+    padding: 15px 10px 0;
+    z-index: 20;
+    position: relative;
+}
+.videos .video .view
+{
+    background-color: #fff;
+    padding: 10px;
+    font-size: 13px;
+    z-index: 20;
+    position: relative;
+}
